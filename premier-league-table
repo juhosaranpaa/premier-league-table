@@ -69,7 +69,9 @@ for _, row in filtered_games.iterrows():
 def clean_team_name(name):
     return (
         name.replace(" Football Club", "")
-        .replace("Association Football Club ", "")
+        .replace("Association ", "")
+        .replace(" and Hove Albion", "")
+        .replace(" Wanderers", "")
         .strip()
     )
 
